@@ -8,7 +8,8 @@ namespace Octelys.Sandbox.Records.Benchmarks;
 public class ClassVersusRecordMemory
 {
     private List<BandClass> _bandClasses = [];
-    private List<BandRecord> _bandRecords = [];
+    private List<BandRecordStruct> _bandRecordStructs = [];
+    private List<BandRecordClass> _bandRecordClasses = [];
     
     [Params(1_000, 10_000, 100_000, 1_000_000, 10_000_000)]
     public int ListSize { get; set; }
@@ -17,7 +18,8 @@ public class ClassVersusRecordMemory
     public void Setup()
     {
         _bandClasses = new List<BandClass>(ListSize);
-        _bandRecords = new List<BandRecord>(ListSize);
+        _bandRecordStructs = new List<BandRecordStruct>(ListSize);
+        _bandRecordClasses = new List<BandRecordClass>(ListSize);
     }
     
     [Benchmark]
@@ -37,13 +39,29 @@ public class ClassVersusRecordMemory
     }
     
     [Benchmark]
-    public void BenchmarkRecordsAllocations()
+    public void BenchmarkRecordStructsAllocations()
     {
         for (int i = 0; i < ListSize; i++)
         {
-            _bandRecords.Add
+            _bandRecordStructs.Add
             (
-                new BandRecord
+                new BandRecordStruct
+                (
+                    "Name",
+                    "Origin"
+                )
+            );
+        }
+    }
+    
+    [Benchmark]
+    public void BenchmarkRecordClassesAllocations()
+    {
+        for (int i = 0; i < ListSize; i++)
+        {
+            _bandRecordClasses.Add
+            (
+                new BandRecordClass
                 (
                     "Name",
                     "Origin"
