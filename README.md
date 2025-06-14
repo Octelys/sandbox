@@ -2,7 +2,7 @@
 
 ## ClassVersusRecordMemory: Class vs Record in a list
 
-This benchmark explores the benefits of using a `record` instead of a `class`:
+This benchmark explores the benefits of using a `record` instead of a `class`.
 
 | Method                      | ListSize | Mean          | Error         | StdDev       | Gen0       | Gen1       | Gen2      | Allocated   |
 |---------------------------- |--------- |--------------:|--------------:|-------------:|-----------:|-----------:|----------:|------------:|
@@ -16,3 +16,5 @@ This benchmark explores the benefits of using a `record` instead of a `class`:
 | BenchmarkRecordsAllocations | 1000000  |   2,453.68 us |    844.039 us |    46.265 us |          - |          - |         - |       736 B |
 | BenchmarkClassAllocations   | 10000000 | 676,569.07 us | 88,963.177 us | 4,876.372 us | 54000.0000 | 20000.0000 | 3000.0000 | 320002768 B |
 | BenchmarkRecordsAllocations | 10000000 |  24,265.59 us |  2,954.323 us |   161.936 us |          - |          - |         - |       736 B |
+
+Using the records in this case does not trigger additional allocations except for the one done when instantiating the list.
