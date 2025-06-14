@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02466DF8-AC95-4371-BD19-A518035D1AE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Octelys.Sandbox.Records", "src\Octelys.Sandbox.Records\Octelys.Sandbox.Records.csproj", "{A71CD8FA-0AD4-4D98-88BD-99CE6CFEE477}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{29738CC9-4D68-42F2-823B-171D2D298485}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A71CD8FA-0AD4-4D98-88BD-99CE6CFEE477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A71CD8FA-0AD4-4D98-88BD-99CE6CFEE477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A71CD8FA-0AD4-4D98-88BD-99CE6CFEE477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A71CD8FA-0AD4-4D98-88BD-99CE6CFEE477}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A71CD8FA-0AD4-4D98-88BD-99CE6CFEE477} = {02466DF8-AC95-4371-BD19-A518035D1AE4}
+	EndGlobalSection
+EndGlobal
